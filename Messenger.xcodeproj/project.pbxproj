@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9527400E2854AE4F00107109 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9527400D2854AE4F00107109 /* Extensions.swift */; };
 		9562BFCF2853620100EF86E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562BFCE2853620100EF86E1 /* AppDelegate.swift */; };
 		9562BFD12853620100EF86E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562BFD02853620100EF86E1 /* SceneDelegate.swift */; };
 		9562BFD32853620100EF86E1 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562BFD22853620100EF86E1 /* ConversationViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9527400D2854AE4F00107109 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9562BFCB2853620100EF86E1 /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9562BFCE2853620100EF86E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9562BFD02853620100EF86E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				9562BFCE2853620100EF86E1 /* AppDelegate.swift */,
 				9562BFD02853620100EF86E1 /* SceneDelegate.swift */,
+				9527400D2854AE4F00107109 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				9562BFF12853737900EF86E1 /* NewConversationViewController.swift in Sources */,
 				9562BFD32853620100EF86E1 /* ConversationViewController.swift in Sources */,
 				9562BFEF285372ED00EF86E1 /* VideoPlayerViewController.swift in Sources */,
+				9527400E2854AE4F00107109 /* Extensions.swift in Sources */,
 				9562BFCF2853620100EF86E1 /* AppDelegate.swift in Sources */,
 				9562BFF3285373A200EF86E1 /* ProfileViewController.swift in Sources */,
 				9562BFD12853620100EF86E1 /* SceneDelegate.swift in Sources */,
