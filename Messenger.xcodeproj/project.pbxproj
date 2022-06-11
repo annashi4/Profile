@@ -49,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9527400C2854A06200107109 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9562BFE82853726E00EF86E1 /* LoginViewController.swift */,
+				9562BFEA2853729900EF86E1 /* RegisterViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		9562BFC22853620000EF86E1 = {
 			isa = PBXGroup;
 			children = (
@@ -91,8 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				9562BFD22853620100EF86E1 /* ConversationViewController.swift */,
-				9562BFE82853726E00EF86E1 /* LoginViewController.swift */,
-				9562BFEA2853729900EF86E1 /* RegisterViewController.swift */,
+				9527400C2854A06200107109 /* Login */,
 				9562BFEC285372D500EF86E1 /* PhotoViewController.swift */,
 				9562BFEE285372ED00EF86E1 /* VideoPlayerViewController.swift */,
 				9562BFF02853737900EF86E1 /* NewConversationViewController.swift */,
