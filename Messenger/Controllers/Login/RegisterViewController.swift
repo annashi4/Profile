@@ -126,7 +126,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @objc private func loginButtonTapped(){
         guard let email = emailField.text, let password = passwordField.text,
               !email.isEmpty, !password.isEmpty, password.count >= 6 else {
-            return
+            return alertUserLoginError()
         }
         
     }
