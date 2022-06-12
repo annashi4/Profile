@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PhotosUI
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     
@@ -112,11 +113,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         return button
     }()
-    
-    private let imageView: UIView = {
+     
+        private let imageView: UIImageView = {
         
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "person")
+        let image = imageView.image
         imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit
         return imageView
@@ -246,6 +248,7 @@ extension RegisterViewController {
 
 extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    
     func presentPhotoActionSheet() {
         let actionSheet = UIAlertController(title: "Profile picture",
                                             message: "How would you like to select a pictre?",
@@ -266,36 +269,38 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         present(actionSheet, animated: true)
     }
     
+
     func presentCamera() {
         let vc = UIImagePickerController()
+        
         vc.sourceType = .camera
         vc.delegate = self
         vc.allowsEditing = true
         present (vc, animated: true)
     }
-    
+
     func presentPhotoPicker() {
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
         vc.delegate = self
         vc.allowsEditing = true
         present (vc, animated: true)
-        
-        
+
+
     }
-    
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else{
+            return
+        }
+        self.imageView.image = selectedImage
+        
         picker.dismiss(animated: true, completion: nil)
-        print(info)
-        
-        
-            // self.imageView.image = selectedImage
     }
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
     
 }
-
 
