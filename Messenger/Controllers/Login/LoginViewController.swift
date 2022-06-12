@@ -117,6 +117,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc private func loginButtonTapped(){
+        
+        emailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+        
         guard let email = emailField.text, let password = passwordField.text,
               !email.isEmpty, !password.isEmpty, password.count >= 6 else {
             return alertUserLoginError()
@@ -139,7 +143,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
 }
-// it's supposed to have UITextFieldDelegate but adding it returns an error. CHECK LATER
+
 extension LoginViewController {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
