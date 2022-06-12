@@ -130,7 +130,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                                                             target: self,
                                                             action: #selector(didTapRegister))
         registerButton.addTarget(self,
-                              action: #selector (registerButtonTapped),
+                              action: #selector (didTapRegisterButton),
                               for: .touchUpInside)
         
         emailField.delegate = self
@@ -150,12 +150,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         scrollView.isUserInteractionEnabled = true
     }
     
-    let gesture = UITapGestureRecognizer(target: RegisterViewController.self,
-                                         action: #selector(didTapChangeProfilePic))
+    lazy var gesture = UITapGestureRecognizer(target: self,
+                                              action: #selector(didTapChangeProfilePic))
+    
     
     @objc func didTapChangeProfilePic(){
         
-        
+        presentPhotoActionSheet()
         
     }
     
@@ -191,7 +192,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    @objc private func registerButtonTapped(){
+    @objc private func didTapRegisterButton(){
         
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
@@ -235,10 +236,41 @@ extension RegisterViewController {
         }
         else if textField == passwordField {
             
-            registerButtonTapped()
+            didTapRegisterButton()
         }
         
         return true
+    }
+    
+}
+
+extension RegisterViewController: UIImagePickerControllerDelegate {
+    
+    func presentPhotoActionSheet() {
+        let actionSheet = UIAlertController(title: "Profile picture",
+                                            message: "How would you like to select a pictre?",
+                                            preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Cancel",
+                                            style: .cancel,
+                                            handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Take photo",
+                                            style: .default,
+                                            handler: { _ in
+    
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Choose photo",
+                                            style: .default,
+                                            handler: { _ in
+        }))
+        
+        present(actionSheet, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+       
     }
     
 }
