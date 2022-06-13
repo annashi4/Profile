@@ -120,7 +120,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         imageView.image = UIImage(systemName: "person")
         let image = imageView.image
         imageView.tintColor = .gray
+        imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFit
+        imageView.layer.borderWidth = 2
+        imageView.layer.borderColor = UIColor.lightGray.cgColor
         return imageView
     }()
     
@@ -170,6 +173,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                                  y: 20,
                                  width: size,
                                  height: size)
+        imageView.layer.cornerRadius = imageView.width/2.0
         emailField.frame = CGRect(x:30,
                                   y: imageView.bottom + 10,
                                   width: scrollView.width - 60,
