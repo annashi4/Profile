@@ -22,6 +22,7 @@
 		9562BFEF285372ED00EF86E1 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562BFEE285372ED00EF86E1 /* VideoPlayerViewController.swift */; };
 		9562BFF12853737900EF86E1 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562BFF02853737900EF86E1 /* NewConversationViewController.swift */; };
 		9562BFF3285373A200EF86E1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562BFF2285373A200EF86E1 /* ProfileViewController.swift */; };
+		95F0D60B28588BDE00C1B7DA /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0D60A28588BDE00C1B7DA /* DatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		9562BFEE285372ED00EF86E1 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		9562BFF02853737900EF86E1 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		9562BFF2285373A200EF86E1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		95F0D60A28588BDE00C1B7DA /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				9562BFCE2853620100EF86E1 /* AppDelegate.swift */,
 				9562BFD02853620100EF86E1 /* SceneDelegate.swift */,
 				9527400D2854AE4F00107109 /* Extensions.swift */,
+				95F0D60A28588BDE00C1B7DA /* DatabaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				9562BFF3285373A200EF86E1 /* ProfileViewController.swift in Sources */,
 				9562BFD12853620100EF86E1 /* SceneDelegate.swift in Sources */,
 				9562BFED285372D500EF86E1 /* PhotoViewController.swift in Sources */,
+				95F0D60B28588BDE00C1B7DA /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
